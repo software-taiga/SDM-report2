@@ -7,7 +7,7 @@ def calc(A, B):
     ai = str(A)
     bi = str(B)
     p = re.compile('\d+(\.\d+)?')
-    if p.match(ai) or p.match(bi):
+    if p.match(ai) and p.match(bi):
         a = float(ai)
         b = float(bi)
         if a.is_integer() and b.is_integer():  # 浮動小数点数値を整数値にできるか判定(float.is_integer() メソッド)
